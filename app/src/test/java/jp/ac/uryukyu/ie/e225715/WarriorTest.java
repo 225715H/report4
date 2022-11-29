@@ -8,14 +8,12 @@ public class WarriorTest {
     void attackTest(){
         int defaultWarriorAttack = 100;
         int defaultEnemyHP = 200;
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             Warrior demoWarrior = new Warrior("デモ戦士", 100, defaultWarriorAttack);
             Enemy demoEnemy = new Enemy("デモスライム", 200, 10);
             demoWarrior.attackWithWeponSkill(demoEnemy);
             int damage = defaultEnemyHP - demoEnemy.getHitPoint();
             assertEquals(defaultWarriorAttack * 1.5, damage);
         }
-    }
-    
-
+    }    
 }

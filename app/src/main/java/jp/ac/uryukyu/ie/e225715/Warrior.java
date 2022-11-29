@@ -9,6 +9,7 @@ public class Warrior extends Hero{
         if (this.dead == false){
             int damage = (int)(this.attack * 1.5);
             System.out.printf("%sの攻撃!ウェポンスキルを発動!%sに%dのダメージを与えた!!\n", name, l.getName(), damage);
+            l.wounded(damage);
         }
     }
     
